@@ -1,0 +1,21 @@
+{
+  "name": "azurre/php-shell",
+  "description": "A convenient component of PHP CLI wrapper",
+  "keywords": ["process", "linux", "cmd","shell"],
+  "authors": [
+    {
+      "name": "Aleksandr Milenin",
+      "email": "admin@azrr.info"
+    }
+  ],
+  "autoload": {
+    "psr-0": {
+      "Azurre\\Component\\Http": "src/"
+    }
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/azurre/php-shell",
+  "support": {
+    "issues": "https://github.com/azurre/php-shell/issues"
+  }
+}
