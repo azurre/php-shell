@@ -10,7 +10,7 @@
   ],
   "autoload": {
     "psr-0": {
-      "Azurre": "src/Azurre/"
+      "Azurre\\Component\Shell": "src/"
     }
   },
   "license": "MIT",
