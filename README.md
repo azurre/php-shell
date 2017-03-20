@@ -3,6 +3,8 @@
 # Simple usage
 
 ```php
+use Azurre\Component\Shell\Wrapper as Shell;
+
 $cmd = 'ls -lwa /tmp';
 echo "Shell::sCmd: " . Shell::sCmd($cmd) . PHP_EOL;
 echo "Shell::cmd: " . PHP_EOL;
