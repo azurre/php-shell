@@ -5,7 +5,7 @@
  * @author  Aleksandr Milenin azrr.mail@gmail.com
  */
 
-namespace Azurre\Component;
+namespace Azurre\Component\Shell;
 
 class Shell {
 
