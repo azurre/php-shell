@@ -9,8 +9,8 @@
     }
   ],
   "autoload": {
-    "psr-4": {
-      "Azurre": "src/"
+    "psr-0": {
+      "Azurre": "src/Azurre/"
     }
   },
   "license": "MIT",
