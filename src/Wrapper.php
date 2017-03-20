@@ -5,9 +5,9 @@
  * @author  Aleksandr Milenin azrr.mail@gmail.com
  */
 
-namespace Azurre\Component;
+namespace Azurre\Component\Shell;
 
-class Shell {
+class Wrapper {
 
     const STDIN    = 0;
     const STDOUT   = 1;
