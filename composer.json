@@ -1,16 +1,17 @@
 {
   "name": "azurre/php-shell",
-  "description": "A convenient component of PHP CLI wrapper",
-  "keywords": ["process", "linux", "cmd","shell"],
+  "version": "2.0",
+  "description": "A convenient none blocking asynchronous shell",
+  "keywords": ["process", "linux", "cmd", "shell", "async", "asynchronous", "none blocking"],
   "authors": [
     {
-      "name": "Aleksandr Milenin",
+      "name": "Alex Milenin",
       "email": "admin@azrr.info"
     }
   ],
   "autoload": {
     "psr-4": {
-      "Azurre\\Component\\Shell\\": "src/"
+      "Azurre\\Component\\System\\": "src/"
     }
   },
   "license": "MIT",
