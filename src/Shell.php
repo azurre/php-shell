@@ -18,9 +18,6 @@ class Shell
     const STDOUT = 1;
     const STDERR = 2;
 
-    /** @var string Bash path */
-    const BASH = 'bash';
-
     /** @var bool run process in background */
     protected $isAsync;
 
@@ -54,8 +51,8 @@ class Shell
     /** @var float */
     protected $checkTimeout = 0.1;
 
-    /** @var array An array with the environment variables for the command that will be run */
-    protected $env = [];
+    /** @var array|null An array with the environment variables for the command that will be run */
+    protected $env;
 
     /**
      * Run command
@@ -75,12 +72,10 @@ class Shell
         $this->cmd = $cmd;
         $this->isAsync = $async;
         $this->isInProgress = true;
-        $this->process = proc_open(static::BASH, $descriptors, $this->pipes, $this->getCwd(), $this->getEnv());
+        $this->process = proc_open($cmd, $descriptors, $this->pipes, $this->getCwd(), $this->getEnv());
         if (!$this->process) {
             return $this;
         }
-        fwrite($this->pipes[static::STDIN], $cmd);
-        fclose($this->pipes[static::STDIN]);
         if ($async) {
             stream_set_blocking($this->pipes[static::STDOUT], false);
             stream_set_blocking($this->pipes[static::STDERR], false);
@@ -171,7 +166,7 @@ class Shell
     /**
      * Get environment variables
      *
-     * @return array
+     * @return array|null
      */
     public function getEnv()
     {
